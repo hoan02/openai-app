@@ -1,0 +1,201 @@
+.chatgpt{
+  position: relative;
+  color: whitesmoke;
+  background-color: #202123;
+  height: calc(100vh - 66px);
+  width: 100%;
+  display: flex;
+  top: 66px;
+
+
+  .container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid gray;
+
+    .conversations{
+      background-color: #202123;
+      width: 260px;
+      border-right: 1px solid rgb(166, 166, 166);
+      text-align: left;
+      flex-direction: column;
+      display: flex;
+
+      .conversation{
+        margin: 10px 10% 0 10%;
+        width: 80%;
+        height: 36px;
+        border: 1px solid whitesmoke;
+        border-radius: 10px;
+        display: flex;
+        justify-content:space-between;
+        cursor: pointer;
+
+        .text{
+          height: 24px;
+          line-height: 24px;
+          width: 120px;
+          color: white;
+          font-size: 16px;
+          margin: 5px 20px;
+        }
+
+        input{
+          width: 100%;
+          margin: 5px;
+          padding: 0 5px;
+        }
+
+        .icon{
+          padding: 5px;
+          margin-right: 5px;
+          justify-items: center;
+
+          img{
+            height: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            &:hover{
+              background-color: rgb(149, 149, 149);
+            }
+          }
+        }
+        &:hover{
+          background-color: #2c2d30;
+        }
+      }
+
+      .newConversation{
+        .iconAdd{
+          padding: 0 15px;
+        }
+        
+        .inputNewConv{
+          color: white;
+          background: none;
+          border: none;
+          border-bottom: 1px solid gray;
+          &:focus{
+            outline: none;
+          }
+        }
+      }
+
+      .renderConversations{
+        height: 70%;
+        border-bottom: 1px solid whitesmoke;
+      }
+
+      .subLeft{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px;
+        .item{
+          height: 30px;
+          color: white;
+          font-size: 16px;
+          display: flex;
+          cursor: pointer;
+
+          &hover{
+            background-color: #ffffff;
+          }
+
+          img{
+            height: 100%;
+            padding: 5px;
+          }
+
+          .titleItem{
+            margin: auto 5px;
+            width: 100%;
+            &:hover{
+              opacity: 0.6;
+            }
+          }
+          
+        }
+        
+      }
+    }
+
+  
+    .chatBox{
+      flex: 1;
+      background-color: #343541;
+      position: relative;
+      overflow-y: auto;
+      margin-bottom: 120px;
+
+      .notice{
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 100px;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .chatInputContainer{
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+        box-sizing: content-box;
+        background-image: linear-gradient(to top, #191a1b 0%, #343541 100%);
+        text-align: center;
+
+        .noticeBottom{
+          padding: 20px;
+          color: green;
+          font-size: 20px;
+          font-weight: 600;
+          height: 120px;
+        }
+
+        .chatInputHolder{
+          display: flex-end;
+          margin: 20px 15%;
+
+          .chatInputTextarea{
+            width: 100%;
+            color: whitesmoke;
+            padding: 10px;
+            background-color: #474857;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.2);
+          }
+          
+          img{
+            position: absolute;
+            margin-top: 6px;
+            margin-left: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+
+            &:hover{
+              background-color: #1d1d1d;
+            }
+          }
+
+        }
+        .title{
+          color: #878787;
+          margin: 0 20px 20px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .sideMenu{
+    display: none;
+  }
+}

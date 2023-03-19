@@ -1,0 +1,25 @@
+.chatLog{
+  padding: 24px;
+  text-align: left; 
+
+  .chatMessage{
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 15px auto;
+
+    .avatar{
+      margin-right: 40px;
+    }
+
+    img{
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.bot{
+  background-color: #444654;
+}
