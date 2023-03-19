@@ -34,12 +34,12 @@ const connectDB = async () => {
     console.log(error);
   }
 };
-const configCors = {
-  origin: true, 
-  credentials: true 
-}
 
-app.use(cors(configCors));
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
+
 app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser(process.env.JWT_KEY));
 
