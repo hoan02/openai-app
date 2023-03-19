@@ -41,7 +41,9 @@ const configCors = {
 
 app.use(cors(configCors));
 app.use(express.json({ limit: "50mb" }));
-app.use(cookieParser(process.env.JWT_KEY));
+// app.use(cookieParser(process.env.JWT_KEY));
+app.use(cookieParser());
+
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
