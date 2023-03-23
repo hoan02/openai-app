@@ -2,9 +2,7 @@ import User from "../models/user.model.js";
 import createError from "../utils/createError.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import * as dotenv from "dotenv";
 
-dotenv.config()
 
 export const register = async (req, res, next) => {
   try {
@@ -20,7 +18,6 @@ export const register = async (req, res, next) => {
     next(err);
   }
 };
-
 export const login = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: req.body.username });
