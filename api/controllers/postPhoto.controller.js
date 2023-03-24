@@ -23,6 +23,16 @@ export const createPostPhoto = async (req, res, next) => {
 };
 
 
+export const getMyPosts = async (req, res, next) => {
+  try {
+    const postPhoto = await PostPhoto.find({ userId: req.userId });
+    res.status(200).send(postPhoto);
+  } catch (err) {
+    next(createError(500, "Fetching posts failed, please try again"));
+  }
+};
+
+
 
 export const getAllPostPhoto = async (req, res, next) => {
   try {

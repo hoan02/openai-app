@@ -15,6 +15,7 @@ import Blog from "./pages/blog/Blog";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import MyAccount from "./pages/myAccount/MyAccount";
+import MyPosts from "./pages/myPosts/MyPosts";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/dalle" element={<Dalle />} />
             <Route path="/dalle/generate" element={<GeneratePhoto />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/my-posts" element={<MyPosts />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/my-account" element={<MyAccount />} />

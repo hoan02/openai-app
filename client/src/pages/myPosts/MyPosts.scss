@@ -1,0 +1,19 @@
+.myPosts{
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 66px;
+
+  .container{
+    margin: auto;
+    max-width: 1080px;
+
+    .titleContainer{
+      margin-top: 50px;
+      margin-left: 20px;
+    }
+    .renderPost{
+      margin-top: 30px;
+      min-height: 1000px;
+    }
+  }
+}
