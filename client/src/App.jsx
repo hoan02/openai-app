@@ -33,6 +33,7 @@ const App = () => (
             <Route path="/dalle/generate" element={<GeneratePhoto />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/my-posts" element={<MyPosts />} />
+            <Route path="/blog/my-posts/:id" element={<MyPosts />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/my-account" element={<MyAccount />} />

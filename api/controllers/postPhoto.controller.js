@@ -32,6 +32,30 @@ export const getMyPosts = async (req, res, next) => {
   }
 };
 
+export const editPost = async (req, res, next) => {
+  const idPost = req.params.id;
+  try {
+    const updatePost = await PostPhoto.findByIdAndUpdate(idPost,
+      {
+        title: req.body.title,
+        desc: req.body.desc,
+      }
+    );
+    res.status(200).send(updatePost);
+  } catch (err) {
+    next(createError(500, "Update post failed, please try again"));
+  }
+};
+
+export const deletePost = async (req, res, next) => {
+  const idPost = req.params.id;
+  try{
+    await PostPhoto.findByIdAndDelete(idPost)
+    res.status(200).send("Delete post successfully!");
+  } catch (err) {
+    next(createError(500, "Update post failed, please try again"));
+  }
+};
 
 
 export const getAllPostPhoto = async (req, res, next) => {
